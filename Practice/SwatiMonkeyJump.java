@@ -29,18 +29,28 @@ public class SwatiMonkeyJump {
             arr[i]= scan.nextInt();
         }
 
-        int move=1,i=0;
-        while(i<arr.length)
+        int move=0,i=0,ans=arr[0];
+        boolean check=true;
+        while(i<arr.length-1)
         {
-            int ans=maxValue(arr,i+1,arr[i]+i);
+            if(ans==0)
+            {
+                System.out.println("-1");
+                check=false;
+                break;
+            }
+            ans=maxValue(arr,i+1,arr[i]+i);
             if(ans==-1)
             {
+                move++;
                 break;
             }
             i=ans;
+            System.out.println(i+" "+ans);
+            ans=arr[ans];
             move++;
         }
-
-           System.out.println(move);
+            if(check)
+                System.out.println(move);
     }
 }
