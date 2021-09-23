@@ -24,8 +24,9 @@ class Student implements  Comparable<Student>{
 
     @Override
     public int compareTo(Student o) {
-        if(o.getCgpa()>this.getCgpa()) return 1;
-        else if(o.getCgpa()<this.getCgpa()) return -1;
+        System.out.println(this.fname+" "+this.getCgpa()+" "+o.getCgpa());
+        if(o.getCgpa()>this.getCgpa()) return -1;
+        else if(o.getCgpa()<this.getCgpa()) return 1;
         return this.getFname().compareTo(o.getFname());
     }
 }

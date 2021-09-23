@@ -16,7 +16,7 @@ public class FormChecker {
         String[] year={"2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020","2021"};
         JFrame frame=new JFrame();
         frame.setSize(500,700);
-
+        frame.setResizable(false);
         JLabel l1=new JLabel("Student Registration form");
         JLabel l2=new JLabel("Name");
         JLabel l3=new JLabel("Age");
